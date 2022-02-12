@@ -1,0 +1,88 @@
+ <launch>
+    
+        
+    
+    <node pkg="beginner_tutorials" name="constant11" type="constant.py">
+        <remap from="constant_input" to="time_generator_output" /> 
+     	<remap from="constant_output" to="constant_output_11" /> 
+   
+    </node>
+    
+     <node pkg="beginner_tutorials" name="constant12" type="constant.py">
+     	<remap from="constant_input" to="time_generator_output" /> 
+     	<remap from="constant_output" to="constant_output_12" /> 
+      
+    </node>
+    
+   
+    <node pkg="beginner_tutorials" name="integrate11" type="integrate.py" >
+    
+     	<remap from="integrate_input" to="integrate_input_1" /> 
+     	<remap from="integrate_output" to="cosine_input_2" /> 
+      
+    </node>
+    
+     <node pkg="beginner_tutorials" name="integrate12" type="integrate.py" >
+    
+     	<remap from="integrate_input" to="integrate_input_1" /> 
+     	<remap from="integrate_output" to="sine_input_2" /> 
+      
+    </node>
+    
+     <node pkg="beginner_tutorials" name="integrate2" type="integrate.py" >
+    
+     	<remap from="integrate_input" to="multi_output_1" /> 
+     	<remap from="integrate_output" to="signal_logger_input_1" /> 
+      
+    </node>
+    
+     <node pkg="beginner_tutorials" name="integrate3" type="integrate.py" >
+    
+     	<remap from="integrate_input" to="multi_output_2" /> 
+     	<remap from="integrate_output" to="signal_logger_input_2" /> 
+      
+    </node>
+     
+     <node pkg="beginner_tutorials" name="multi1" type="multi.py">
+     
+     	<remap from="multi_input_1" to="cosine_output_2" /> 
+     	<remap from="multi_input_2" to="constant_output_11" /> 
+     	<remap from="multi_output" to="multi_output_1" /> 
+      
+    </node>
+    
+       <node pkg="beginner_tutorials" name="multi2" type="multi.py">
+     
+     	<remap from="multi_input_1" to="sine_output_2" /> 
+     	<remap from="multi_input_2" to="constant_output_12" /> 
+     	<remap from="multi_output" to="multi_output_2" /> 
+      
+    </node>
+     
+     <node pkg="beginner_tutorials" name="sine1" type="sine.py">
+     	<remap from="sine_input" to="time_generator_output" /> 
+     	<remap from="sine_output" to="integrate_input_1" /> 
+      
+    </node>
+    
+     <node pkg="beginner_tutorials" name="sine2" type="sine.py">
+     	<remap from="sine_input" to="sine_input_2" /> 
+     	<remap from="sine_output" to="sine_output_2" /> 
+      
+    </node>
+    
+
+    
+     <node pkg="beginner_tutorials" name="cosine2" type="cosine.py">
+     	<remap from="cosine_input" to="cosine_input_2" /> 
+     	<remap from="cosine_output" to="cosine_output_2" /> 
+      
+    </node>
+    
+    
+  
+    <node pkg="beginner_tutorials" name="signal_logger" type="signal_logger.py"/>
+    
+    <node pkg="beginner_tutorials" name="time_generator" type="time_generator.py"/>
+    
+</launch>    
