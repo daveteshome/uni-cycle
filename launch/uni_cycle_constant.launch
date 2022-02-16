@@ -1,7 +1,5 @@
  <launch>
-    
         
-    
     <node pkg="beginner_tutorials" name="constant11" type="constant.py">
         <remap from="constant_input" to="time_generator_output" /> 
      	<remap from="constant_output" to="constant_output_11" /> 
